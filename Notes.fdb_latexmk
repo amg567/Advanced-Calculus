@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1774612467.692 "/home/somoli/uni/MATH_223/Notes.tex" "Notes.pdf" "Notes" 1774612468.74324 0
-  "/home/somoli/uni/MATH_223/Notes.tex" 1774612467.50995 139149 015228442ccccdf29c863cba9e8bfe66 ""
+["pdflatex"] 1774868127.13838 "/home/somoli/uni/MATH_223/Notes.tex" "Notes.pdf" "Notes" 1774868128.24274 0
+  "/home/somoli/uni/MATH_223/Notes.tex" 1774868126.95333 145076 34286ec5ea7d0529019866e766642c59 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1767555874 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1767555874 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1767555874 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -125,10 +125,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1767555874 42087 b0f9697c952c8f5a8eede4134282cb0d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1772396168 5311557 9da84c45f5b388655502706482323571 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1772396132 2008229 bab87392d68a9c386aea8fda98dd394d ""
-  "Notes.aux" 1774612468.691 6155 a3e1aa6fa9e6d0fb224d53ae7e9c6a0c "pdflatex"
-  "Notes.out" 1774612468.691 5661 a90cd44d75c57c5060d24759e11d8209 "pdflatex"
-  "Notes.tex" 1774612467.50995 139149 015228442ccccdf29c863cba9e8bfe66 ""
-  "Notes.toc" 1774612468.6926 3288 0cc3f98ef8666daeb3a6df2392399c46 "pdflatex"
+  "Notes.aux" 1774868128.19171 6155 b87d6fc1fe9cd26a23bc5f8994bf1d91 "pdflatex"
+  "Notes.out" 1774868128.19271 5661 a90cd44d75c57c5060d24759e11d8209 "pdflatex"
+  "Notes.tex" 1774868126.95333 145076 34286ec5ea7d0529019866e766642c59 ""
+  "Notes.toc" 1774868128.19271 3288 0cc3f98ef8666daeb3a6df2392399c46 "pdflatex"
   "images/Topologist's_sine_curve.svg.png" 1772396719.67906 23691 85f2690e6a1c6ca6e8f0bcc56f17167b ""
   "images/ball_example.jpeg" 1772396719.68463 52380 0c0440d52da91f67692972333aff6c07 ""
   (generated)
