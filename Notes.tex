@@ -2858,4 +2858,114 @@ U(P^*,f) - L(P^*,f)
 Hence $f$ is integrable.
 \end{proof}
 
+\begin{example}
+    Let 
+    \[
+    f(x) = \chi_{\Q}(x) = 
+    \begin{cases}
+        1 & x \in \Q \\
+        0 & x \notin \Q
+    \end{cases}
+    \]
+
+    Then for every $x \in \R$, both $\Q$ and $\R \setminus \Q$ are dense, so every neighborhood of $x$ contains points where $f=1$ and points where $f=0$. Hence
+    \[
+    \omega_f(x) = 1 \quad \forall x \in \R
+    \]
+    so
+    \[
+    D_f = \R.
+    \]
+
+    Since $\R$ does not have measure zero, $f$ is not integrable on any interval.
+\end{example}
+
+
+\begin{corollary}
+    Given a rectangle $A \subseteq \R^n$, $f: A \to \R$ is integrable and $\varphi: \R \to \R$ continuous then $\varphi \circ f \in \mathcal{R}(A)$
+\end{corollary}
+
+\begin{proof}
+    Let $g = \varphi \circ f$. $f$ is integrable then the set of discontinuities $Df$ of $f$ has measure zero. If $f$ is continuous at $x_0$ then $g = \varphi \circ f$ is continuous at $x_0$ this implies that $Dg \subseteq Df$ hence $Dg$ has measure zero. Therefore $g$ is integrable.
+
+\end{proof}
+
+\begin{consequence}
+if $f,g \in \mathcal{R}(A)$ then $fg \in \mathcal{R}$
+\end{consequence}
+
+\begin{remark}
+    if $f,g \in \mathcal{R}(A)$ this doesnt not imply that $f \circ g$ is integrable we need continuity.
+\end{remark}
+
+\begin{example}
+    \textbf{Counterexample:} Take \[\psi(x) = \begin{cases}
+        1 & x \ne 0 \\
+        0 & x =  0
+    \end{cases}\quad  \text{ on } [0,1]\] and \[f(x) = \begin{cases}
+        \frac1q & x = \frac{p}{q} \text{ irreducible or } x = 0\\
+        0 & x \notin \Q
+    \end{cases}\]
+\end{example}
+
+\begin{corollary}
+    Let $C$ be a bounded set in $\R^n$. A rectangle in $\R^n$ containing $C$ then \[\chi_C(x) = \begin{cases}
+        1 & x \in C\\
+        0 & x \notin C
+    \end{cases}\] is integrable if and only if boundary $C$ has measure zero so it has content zero.
+\end{corollary}
+\begin{proof}
+    $D_{\chi(C)} = bd(C)$ so $x \in C^\circ$ so $\exists \delta >0$ such that $N_\delta(x) \subseteq C$ for every $y \in N_\delta(x)$ and $\chi_C(y) = 1 \implies \chi_C(x)$ so $\chi_C$ is continuous at x. if $x \in (C^c)^\circ$ same thing. if $x \in bd(C)$ then for every $\delta >0$ there exists $x_1 \in N_\delta(x) \cap C$ and $x_2 \in N_\delta(x) \cap C^c$ and $\chi_C(x_1) = 0$ and $\chi_C(x_2) = 0$ so $\chi_C$ is discontinuous at x. 
+\end{proof}
+
+\begin{definition}
+    Let $C$ be a bouunded set of measeure zero in $\R^n$. and $ f:C \to \R$. extend $f$ to be zero outside $C$ i.e \[f_C(x) = \begin{cases}
+        f(x) & x \in C\\
+        0 & x \notin C
+    \end{cases}\] we define \[\int_C fdx = \int_A f_c(x)dx\] wtih $A$ being a rectangle containing $C$. Let $A_1, A_2$ be two rectangle contianing $C$ and note that $f_C = 0$ outside $A_1 \cap A_2$. Then by homework, $f_C\in \mathcal{R}(A_1) \iff f_C \mathcal{R}(A_2)$ and $\int_{A_1} f_C dx = \int_{A_2} f_C dx$ so the integral is well defined
+\end{definition}
+
+\begin{consequence}
+    Let $C$ be bounded with boundary of measure zero \begin{itemize}
+        \item if $f_1,f_2$ integrable over $C$ then $f_1 + \alpha f_2$ is intregrable and \[\int_C f_1+ \alpha f_2 = \int_C f_1 + \alpha \int_C f_2\]
+        \item if $f,g$ integrable over $C$ and $f \le g$ then $\int_C f \le \int_C g$
+        \item  $f$ is integrable over $C$ if and only if $f$ is continuous on $C$ with the exception of sets of measure zero
+    \end{itemize}
+\end{consequence}
+
+\begin{example}
+    Let $C$ be the triangle in $\R^2$ with vertices $(0,0),(0,1),(1,1)$. Calculate \[\int_C xd(x,y)\]. Let $A = [0 ,1] \times [0,1]$ and let \[f_C = \begin{cases}
+        x & x \in C \\
+        0 & \text{otherwise}
+    \end{cases} = f\chi_C\] and take $P_n = \{0, \frac1n, \frac2n, \dots , 1\}$ on $[0,1]$ and let $R_{ij} = [\frac{i-1}{n}, \frac{i}{n}] \times [\frac{i-1}{n}, \frac{i}{n}]$ and let $P$ be the corresponding partition of $[0,1]\times [0,1]$.\\ If $\underline{j \le i-1}:$ we have $m_{ij} = \frac{i-1}{n}$ and $M_{ij} = \frac{i}{n}$.\\ If $\underline{j = i}:$ we have $m_{ij} = 0$ and $M_{ij} = \frac{i}{n}$ \\ If $\underline{j = i+1}:$ we have $m_{ij} = 0$ and $M_{ij} = \frac{i}{n}$\\ if $\underline{j > i+1:}$ we have $m_{ij} = 0$ and $M_{ij} = 0$. \\ Now we calculate \[
+\begin{aligned}
+L(P,f)
+&= \sum_{i,j=1}^n m_{ij}\,\vol(R_{ij}) \\
+&= \sum_{i=2}^n \sum_{j=1}^{i-1} \frac{i-1}{n}\cdot \frac{1}{n^2} \\
+&= \frac{1}{n^3} \sum_{i=2}^n \sum_{j=1}^{i-1} (i-1) \\
+&= \frac{1}{n^3} \sum_{i=2}^n (i-1)^2 \\
+&= \frac{1}{n^3} \sum_{k=1}^{n-1} k^2 \\
+&= \frac{(n-1)n(2n-1)}{6n^3}.
+\end{aligned}
+\] and \[U(P,f) =  \sum_{i =1 }^n \sum_{j = 1}^n M_{ij}\vol(R_{ij}) = \dots = \frac{n(n+1)(2n+1)}{6n^3}+\frac{(n-1)n}{2n^3}\]. $f$ is integrable and \[L(P,f) \le \int xd(x,y) \le U(P,f) \] so  take the limits of the sum and we get $ \int_C xd(x,y) = \frac13$ 
+\end{example}
+\begin{theorem}[Fubinis theorem]
+     $A \subseteq \R^n$ a rectangle, and $B \subseteq \R^m$ a rectangle. With $x\in A, \ y \in B$ 
+    $$f := f(x,y) \colon \ A \times B \to \R$$
+    and $f$ integrable over $A \times B$, then the functions
+    $$\mathcal{L}(y) = \underline{\int_A} f(x,y) dx, \quad \mathcal{U}(y) = \overline{\int_A} f(x,y) dx$$
+    are integrable over $B$ with 
+    $$\int_B \left(\underline{\int_A}f(x,y) dx\right) dy = \int_B \left(\overline{\int_A}f(x,y) dx\right) = \int_{A \times B} f(x,y) d(x,y)$$
+    By symmetry 
+    $$\int_{A \times B} f(x,y) d(x,y)= \int_A \left(\underline{\int_B}f(x,y) dy\right) dx = \int_A \left(\overline{\int_B}f(x,y) dy\right) dx$$
+    In the particular case when 
+    $$x \to f(x,y)$$
+    is integrable on $A$ for every $y$, we get 
+    $$\int_{A \times B} \int_B \left(\int_A f(x,y) dx\right) dy = \int_A \left(\int_B f(x,y) dy\right) dx$$
+\end{theorem}
+
+\begin{consequence}
+    By induction if $F$ is continuous over $[a_1,b_1] \times \dots \times [a_n,b_n]$ then \[\int_{[a_1,b_1] \times \dots \times [a_n,b_n]}f(x)dx = \int_{[a_1,b_1]} \int _{[a_2,b_2]} \dots \int_{[a_n,b_n]} f(x) dx_ndx_{n-1} \dots dx_1\]
+\end{consequence}
+
 \end{document}
