@@ -14,9 +14,11 @@
 *.snm
 *.vrb
 *.log
+
 # VS Code settings
 .vscode/
 
 # OS files
 .DS_Store
+Thumbs.db
 Thumbs.db
